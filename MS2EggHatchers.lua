@@ -38,6 +38,18 @@ if game.PlaceId == 9551640993 then
         elseif Eggs1 > 9000000 and Eggs1 < 10000000 then
             Goal = 10000000
             Goal2 = "10 Million"
+	elseif Eggs1 > 10000000 and Eggs1 < 11000000 then
+            Goal = 11000000
+            Goal2 = "11 Million"
+        elseif Eggs1 > 11000000 and Eggs1 < 12000000 then
+            Goal = 12000000
+            Goal2 = "12 Million"
+        elseif Eggs1 > 12000000 and Eggs1 < 13000000 then
+            Goal = 13000000
+            Goal2 = "13 Million"
+        elseif Eggs1 > 13000000 and Eggs1 < 14000000 then
+            Goal = 14000000
+            Goal2 = "14 Million"
         end
         
         local Diff = Goal - Eggs1
