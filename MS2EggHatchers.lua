@@ -1,5 +1,18 @@
+wait(1800)
 if game.PlaceId == 9551640993 then
 	local NewColor = (_G.Color == "" and "fffff") or _G.Color
+	-- Starting Egg Value
+	local OnlyCount1 = {"buddy25112","buddy25113","AJ_GamingYYTT","BuddyHatchAlt1","BuddyHatchAlt4","BuddyHatchAlt5","BuddyHatchAlt6","BuddyHatchAlt7","BuddyHatchAlt8","BuddyHatchAlt9"}
+	
+	local Eggs3 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(OnlyCount1) do
+            if string.find(v.Name, b) then
+                Eggs3 = Eggs3 + v.leaderstats["Eggs"].Value
+            end
+        end
+    end
+
     while wait(1800) do
         -- Number 1 Eggs
         local nr1user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["1"].Username.text
@@ -13,6 +26,7 @@ if game.PlaceId == 9551640993 then
         local nr3user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["3"].Username.text
         local nr3count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["3"].Number.text
         
+        -- Estimated Time Counter
         local OnlyCount = {"buddy25112"}
         local Eggs1 = 0
         for i,v in pairs(game:GetService("Players"):GetChildren()) do
@@ -38,7 +52,7 @@ if game.PlaceId == 9551640993 then
         elseif Eggs1 > 9000000 and Eggs1 < 10000000 then
             Goal = 10000000
             Goal2 = "10 Million"
-	elseif Eggs1 > 10000000 and Eggs1 < 11000000 then
+	    elseif Eggs1 > 10000000 and Eggs1 < 11000000 then
             Goal = 11000000
             Goal2 = "11 Million"
         elseif Eggs1 > 11000000 and Eggs1 < 12000000 then
@@ -142,6 +156,30 @@ if game.PlaceId == 9551640993 then
         
         end
         
+        -- Total Account Hatches
+        function abb(Value)
+            local Number
+            local Formatted = Value
+            while true do
+                Formatted, Number = string.gsub(Formatted, "^(-?%d+)(%d%d%d)", '%1,%2')
+                if (Number == 0) then
+                    break
+                end
+            end
+            return Formatted
+        end
+        
+        local Eggs2 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(OnlyCount1) do
+                if string.find(v.Name, b) then
+                    Eggs2 = Eggs2 + v.leaderstats["Eggs"].Value
+                end
+            end
+        end
+        local EggsHatchedPer1 = Eggs2 - Eggs3
+        Eggs3 = Eggs3 + EggsHatchedPer1
+        
         local Webhooksss = _G.Webhookss
         local OSTime = os.time();
         local Time = os.date('!*t', OSTime);
@@ -190,6 +228,13 @@ if game.PlaceId == 9551640993 then
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], EstCount)
+	            
+	        local TotalHatches = {
+	            ["name"] = "Total Eggs Hatched:",
+				["value"] = "Count: " .. abb(Eggs2) .. " | *+" .. abb(EggsHatchedPer1) .. " in the last 30 Minutes*",
+				["inline"] = false
+	            }
+	            table.insert(msg["embeds"][1]["fields"], TotalHatches)
 	
         request = http_request or request or HttpPost or syn.request
         request({Url = Webhooksss, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
