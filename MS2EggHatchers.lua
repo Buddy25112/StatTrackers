@@ -37,33 +37,33 @@ if game.PlaceId == 9551640993 then
             end
         end
         local Goal 
-        if Eggs1 > 5000000 and Eggs1 < 6000000 then 
-            Goal = 6000000
-            Goal2 = "6 Million"
-        elseif Eggs1 > 6000000 and Eggs1 < 7000000 then
-            Goal = 7000000
-            Goal2 = "7 Million"
-        elseif Eggs1 > 7000000 and Eggs1 < 8000000 then
-            Goal = 8000000
-            Goal2 = "8 Million"
-        elseif Eggs1 > 8000000 and Eggs1 < 9000000 then
-            Goal = 9000000
-            Goal2 = "9 Million"
-        elseif Eggs1 > 9000000 and Eggs1 < 10000000 then
+        if Eggs1 > 9000000 and Eggs1 < 10000000 then 
             Goal = 10000000
             Goal2 = "10 Million"
-	    elseif Eggs1 > 10000000 and Eggs1 < 11000000 then
-            Goal = 11000000
-            Goal2 = "11 Million"
-        elseif Eggs1 > 11000000 and Eggs1 < 12000000 then
-            Goal = 12000000
-            Goal2 = "12 Million"
-        elseif Eggs1 > 12000000 and Eggs1 < 13000000 then
-            Goal = 13000000
-            Goal2 = "13 Million"
-        elseif Eggs1 > 13000000 and Eggs1 < 14000000 then
-            Goal = 14000000
-            Goal2 = "14 Million"
+        elseif Eggs1 > 10000000 and Eggs1 < 15000000 then
+            Goal = 15000000
+            Goal2 = "15 Million"
+        elseif Eggs1 > 15000000 and Eggs1 < 20000000 then
+            Goal = 20000000
+            Goal2 = "20 Million"
+        elseif Eggs1 > 20000000 and Eggs1 < 25000000 then
+            Goal = 25000000
+            Goal2 = "25 Million"
+        elseif Eggs1 > 25000000 and Eggs1 < 30000000 then
+            Goal = 30000000
+            Goal2 = "30 Million"
+	    elseif Eggs1 > 30000000 and Eggs1 < 35000000 then
+            Goal = 35000000
+            Goal2 = "35 Million"
+        elseif Eggs1 > 35000000 and Eggs1 < 40000000 then
+            Goal = 40000000
+            Goal2 = "40 Million"
+        elseif Eggs1 > 40000000 and Eggs1 < 45000000 then
+            Goal = 45000000
+            Goal2 = "45 Million"
+        elseif Eggs1 > 45000000 and Eggs1 < 50000000 then
+            Goal = 50000000
+            Goal2 = "50 Million"
         end
         
         local Diff = Goal - Eggs1
