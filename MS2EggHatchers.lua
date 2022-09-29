@@ -1,4 +1,4 @@
-wait(1)
+wait(1800)
 if game.PlaceId == 9551640993 then
 	local NewColor = (_G.Color == "" and "fffff") or _G.Color
 	-- Starting Egg Value
@@ -13,7 +13,7 @@ if game.PlaceId == 9551640993 then
         end
     end
 
-    while wait(60) do
+    while wait(1800) do
         -- Number 1 Eggs
         local nr1user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["1"].Username.text
         local nr1count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["1"].Number.text
@@ -215,9 +215,9 @@ if game.PlaceId == 9551640993 then
         local msg = {
             ["embeds"] = {
                 {
-                    ["title"] = "Top 3 Egg Hatchers",
+                    ["title"] = "Top 10 Egg Hatchers",
                     ["color"] = tonumber(tostring("0x" .. NewColor)),
-                    ["description"] = "Top 3 counts will be displayed below",
+                    ["description"] = "Top 10 counts will be displayed below",
                     ["thumbnail"] = {
                         ["url"] = "https://media.discordapp.net/attachments/750156768834879488/992310563541622824/Untitled_design__35_-removebg-preview.png"
                     },
