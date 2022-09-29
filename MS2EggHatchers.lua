@@ -1,4 +1,4 @@
-wait(1800)
+wait(60)
 if game.PlaceId == 9551640993 then
 	local NewColor = (_G.Color == "" and "fffff") or _G.Color
 	-- Starting Egg Value
