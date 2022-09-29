@@ -25,6 +25,34 @@ if game.PlaceId == 9551640993 then
         -- Number 3 Eggs
         local nr3user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["3"].Username.text
         local nr3count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["3"].Number.text
+    
+        -- Number 4 Eggs
+        local nr4user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["4"].Username.text
+        local nr4count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["4"].Number.text
+
+        -- Number 5 Eggs
+        local nr5user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["5"].Username.text
+        local nr5count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["5"].Number.text
+
+        -- Number 6 Eggs
+        local nr6user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["6"].Username.text
+        local nr6count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["6"].Number.text
+    
+        -- Number 7 Eggs
+        local nr7user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["7"].Username.text
+        local nr7count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["7"].Number.text
+
+        -- Number 8 Eggs
+        local nr8user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["8"].Username.text
+        local nr8count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["8"].Number.text
+
+        -- Number 9 Eggs
+        local nr9user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["9"].Username.text
+        local nr9count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["9"].Number.text
+
+        -- Number 10 Eggs
+        local nr10user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["10"].Username.text
+        local nr10count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["10"].Number.text
         
         -- Estimated Time Counter
         local OnlyCount = {"buddy25112"}
@@ -221,6 +249,55 @@ if game.PlaceId == 9551640993 then
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], Number3PlayerEmbed)
+            
+            local Number4PlayerEmbed = {
+	            ["name"] = "#4 Hatcher: " .. nr4user,
+				["value"] = "Count: " .. nr4count,
+				["inline"] = false
+	            }
+	            table.insert(msg["embeds"][1]["fields"], Number4PlayerEmbed)
+            
+            local Number5PlayerEmbed = {
+	            ["name"] = "#5 Hatcher: " .. nr5user,
+				["value"] = "Count: " .. nr5count,
+				["inline"] = false
+	            }
+	            table.insert(msg["embeds"][1]["fields"], Number5PlayerEmbed)
+            
+            local Number6PlayerEmbed = {
+	            ["name"] = "#6 Hatcher: " .. nr6user,
+				["value"] = "Count: " .. nr6count,
+				["inline"] = false
+	            }
+	            table.insert(msg["embeds"][1]["fields"], Number6PlayerEmbed)
+            
+            local Number7PlayerEmbed = {
+	            ["name"] = "#7 Hatcher: " .. nr7user,
+				["value"] = "Count: " .. nr7count,
+				["inline"] = false
+	            }
+	            table.insert(msg["embeds"][1]["fields"], Number7PlayerEmbed)
+            
+            local Number8PlayerEmbed = {
+	            ["name"] = "#8 Hatcher: " .. nr8user,
+				["value"] = "Count: " .. nr8count,
+				["inline"] = false
+	            }
+	            table.insert(msg["embeds"][1]["fields"], Number8PlayerEmbed)
+            
+            local Number9PlayerEmbed = {
+	            ["name"] = "#9 Hatcher: " .. nr9user,
+				["value"] = "Count: " .. nr9count,
+				["inline"] = false
+	            }
+	            table.insert(msg["embeds"][1]["fields"], Number9PlayerEmbed)
+            
+            local Number10PlayerEmbed = {
+	            ["name"] = "#10 Hatcher: " .. nr10user,
+				["value"] = "Count: " .. nr10count,
+				["inline"] = false
+	            }
+	            table.insert(msg["embeds"][1]["fields"], Number10PlayerEmbed)
 	            
 	        local EstCount = {
 	            ["name"] = "Estimated Time Until " .. Goal2 .. " Eggs:",
