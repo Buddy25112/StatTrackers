@@ -1,4 +1,4 @@
-wait(60)
+wait(1)
 if game.PlaceId == 9551640993 then
 	local NewColor = (_G.Color == "" and "fffff") or _G.Color
 	-- Starting Egg Value
@@ -13,7 +13,7 @@ if game.PlaceId == 9551640993 then
         end
     end
 
-    while wait(1800) do
+    while wait(60) do
         -- Number 1 Eggs
         local nr1user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["1"].Username.text
         local nr1count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["1"].Number.text
