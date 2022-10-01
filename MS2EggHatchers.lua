@@ -2,7 +2,7 @@ wait(1800)
 if game.PlaceId == 9551640993 then
 	local NewColor = (_G.Color == "" and "fffff") or _G.Color
 	-- Starting Egg Value
-	local OnlyCount1 = {"buddy25112","buddy25113","AJ_GamingYYTT","BuddyHatchAlt1","BuddyHatchAlt4","BuddyHatchAlt5","BuddyHatchAlt6","BuddyHatchAlt7","BuddyHatchAlt8","BuddyHatchAlt9"}
+	local OnlyCount1 = {"buddy25112","buddy25113","AJ_GamingYYTT","BuddyHatchAlt1","BuddyHatchAlt4","BuddyHatchAlt5","BuddyHatchAlt6","BuddyHatchAlt7","BuddyHatchAlt8","BuddyHatchAlt9","BuddyHatchAlt10","BuddyHatchAlt11"}
 	
 	local Eggs3 = 0
     for i,v in pairs(game:GetService("Players"):GetChildren()) do
