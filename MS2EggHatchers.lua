@@ -2,16 +2,117 @@ wait(1800)
 if game.PlaceId == 9551640993 then
 	local NewColor = (_G.Color == "" and "fffff") or _G.Color
 	-- Starting Egg Value
-	local OnlyCount1 = {"buddy25112","buddy25113","AJ_GamingYYTT","BuddyHatchAlt1","BuddyHatchAlt4","BuddyHatchAlt5","BuddyHatchAlt6","BuddyHatchAlt7","BuddyHatchAlt8","BuddyHatchAlt9","BuddyHatchAlt10","BuddyHatchAlt11"}
-	
-	local Eggs3 = 0
+    local Count1 = {"buddy25112"}
+    local Count2 = {"buddy25113"}
+    local Count3 = {"BuddyHatchAlt4"}
+    local Count4 = {"BuddyHatchAlt5"}
+    local Count5 = {"BuddyHatchAlt6"}
+    local Count6 = {"BuddyHatchAlt7"}
+    local Count7 = {"BuddyHatchAlt8"}
+    local Count8 = {"BuddyHatchAlt9"}
+    local Count9 = {"BuddyHatchAlt10"}
+    local Count10 = {"BuddyHatchAlt11"}
+    local Count11 = {"BuddyHatchAlt1"}
+    local Count12 = {"AJ_GamingYYTT"}
+    
+    local Eggs1 = 0
     for i,v in pairs(game:GetService("Players"):GetChildren()) do
-        for n,b in pairs(OnlyCount1) do
-            if string.find(v.Name, b) then
+        for n,b in pairs(Count1) do
+            if string.find(v.Name, "buddy25112") then
+                Eggs1 = Eggs1 + v.leaderstats["Eggs"].Value
+            end
+        end
+    end
+    local Eggs2 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(Count2) do
+            if string.find(v.Name, "buddy25113") then
+                Eggs2 = Eggs2 + v.leaderstats["Eggs"].Value
+            end
+        end
+    end
+    local Eggs3 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(Count3) do
+            if string.find(v.Name, "BuddyHatchAlt4") then
                 Eggs3 = Eggs3 + v.leaderstats["Eggs"].Value
             end
         end
     end
+    local Eggs4 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(Count4) do
+            if string.find(v.Name, "BuddyHatchAlt5") then
+                Eggs4 = Eggs4 + v.leaderstats["Eggs"].Value
+            end
+        end
+    end
+    local Eggs5 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(Count5) do
+            if string.find(v.Name, "BuddyHatchAlt6") then
+                Eggs5 = Eggs5 + v.leaderstats["Eggs"].Value
+            end
+        end
+    end
+    local Eggs6 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(Count6) do
+            if string.find(v.Name, "BuddyHatchAlt7") then
+                Eggs6 = Eggs6 + v.leaderstats["Eggs"].Value
+            end
+        end
+    end
+    local Eggs7 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(Count7) do
+            if string.find(v.Name, "BuddyHatchAlt8") then
+                Eggs7 = Eggs7 + v.leaderstats["Eggs"].Value
+            end
+        end
+    end
+    local Eggs8 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(Count8) do
+            if string.find(v.Name, "BuddyHatchAlt9") then
+                Eggs8 = Eggs8 + v.leaderstats["Eggs"].Value
+            end
+        end
+    end
+    local Eggs9 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(Count9) do
+            if string.find(v.Name, "BuddyHatchAlt10") then
+                Eggs9 = Eggs9 + v.leaderstats["Eggs"].Value
+            end
+        end
+    end
+    local Eggs10 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(Count10) do
+            if string.find(v.Name, "BuddyHatchAlt11") then
+                Eggs10 = Eggs10 + v.leaderstats["Eggs"].Value
+            end
+        end
+    end
+    local Eggs11 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(Count11) do
+            if string.find(v.Name, "BuddyHatchAlt1") then
+                Eggs11 = game:GetService("Players").BuddyHatchAlt1.leaderstats.Eggs.Value
+            end
+        end
+    end
+    local Eggs12 = 0
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        for n,b in pairs(Count12) do
+            if string.find(v.Name, "AJ_GamingYYTT") then
+                Eggs12 = Eggs12 + v.leaderstats["Eggs"].Value
+            end
+        end
+    end
+
+    local TotalEggs = Eggs1 + Eggs2 + Eggs3 + Eggs4 + Eggs5 + Eggs6 + Eggs7 + Eggs8 + Eggs9 + Eggs10 + Eggs11 + Eggs12 
 
     while wait(1800) do
         -- Number 1 Eggs
@@ -197,16 +298,106 @@ if game.PlaceId == 9551640993 then
             return Formatted
         end
         
-        local Eggs2 = 0
+        local Eggss1 = 0
         for i,v in pairs(game:GetService("Players"):GetChildren()) do
-            for n,b in pairs(OnlyCount1) do
-                if string.find(v.Name, b) then
-                    Eggs2 = Eggs2 + v.leaderstats["Eggs"].Value
+            for n,b in pairs(Count1) do
+                if string.find(v.Name, "buddy25112") then
+                    Eggss1 = Eggss1 + v.leaderstats["Eggs"].Value
                 end
             end
         end
-        local EggsHatchedPer1 = Eggs2 - Eggs3
-        Eggs3 = Eggs3 + EggsHatchedPer1
+        local Eggss2 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(Count2) do
+                if string.find(v.Name, "buddy25113") then
+                    Eggss2 = Eggss2 + v.leaderstats["Eggs"].Value
+                end
+            end
+        end
+        local Eggss3 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(Count3) do
+                if string.find(v.Name, "BuddyHatchAlt4") then
+                    Eggss3 = Eggss3 + v.leaderstats["Eggs"].Value
+                end
+            end
+        end
+        local Eggss4 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(Count4) do
+                if string.find(v.Name, "BuddyHatchAlt5") then
+                    Eggss4 = Eggss4 + v.leaderstats["Eggs"].Value
+                end
+            end
+        end
+        local Eggss5 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(Count5) do
+                if string.find(v.Name, "BuddyHatchAlt6") then
+                    Eggss5 = Eggss5 + v.leaderstats["Eggs"].Value
+                end
+            end
+        end
+        local Eggss6 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(Count6) do
+                if string.find(v.Name, "BuddyHatchAlt7") then
+                    Eggss6 = Eggss6 + v.leaderstats["Eggs"].Value
+                end
+            end
+        end
+        local Eggss7 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(Count7) do
+                if string.find(v.Name, "BuddyHatchAlt8") then
+                    Eggss7 = Eggss7 + v.leaderstats["Eggs"].Value
+                end
+            end
+        end
+        local Eggss8 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(Count8) do
+                if string.find(v.Name, "BuddyHatchAlt9") then
+                    Eggss8 = Eggss8 + v.leaderstats["Eggs"].Value
+                end
+            end
+        end
+        local Eggss9 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(Count9) do
+                if string.find(v.Name, "BuddyHatchAlt10") then
+                    Eggss9 = Eggss9 + v.leaderstats["Eggs"].Value
+                end
+            end
+        end
+        local Eggss10 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(Count10) do
+                if string.find(v.Name, "BuddyHatchAlt11") then
+                    Eggss10 = Eggss10 + v.leaderstats["Eggs"].Value
+                end
+            end
+        end
+        local Eggss11 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(Count11) do
+                if string.find(v.Name, "BuddyHatchAlt1") then
+                    Eggss11 = game:GetService("Players").BuddyHatchAlt1.leaderstats.Eggs.Value
+                end
+            end
+        end
+        local Eggss12 = 0
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do
+            for n,b in pairs(Count12) do
+                if string.find(v.Name, "AJ_GamingYYTT") then
+                    Eggss12 = Eggss12 + v.leaderstats["Eggs"].Value
+                end
+            end
+        end
+    
+        local TotalEggss = Eggss1 + Eggss2 + Eggss3 + Eggss4 + Eggss5 + Eggss6 + Eggss7 + Eggss8 + Eggss9 + Eggss10 + Eggss11 + Eggss12 
+        local EggsHatchedPer1 = TotalEggss - TotalEggs
+        TotalEggs = TotalEggs + EggsHatchedPer1
         
         local Webhooksss = _G.Webhookss
         local OSTime = os.time();
@@ -308,7 +499,7 @@ if game.PlaceId == 9551640993 then
 	            
 	        local TotalHatches = {
 	            ["name"] = "Total Eggs Hatched:",
-				["value"] = "Count: " .. abb(Eggs2) .. " | *+" .. abb(EggsHatchedPer1) .. " in the last 30 Minutes*",
+				["value"] = "Count: " .. abb(TotalEggss) .. " | *+" .. abb(EggsHatchedPer1) .. " in the last 30 Minutes*",
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], TotalHatches)
