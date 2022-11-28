@@ -11,8 +11,11 @@ Chat.ChildAdded:Connect(function(instance)
     local NewColor
     local ItemImage
     if string.find(instance.TextLabel.Text, "Ticket") then
-    ItemName = username .. " just found a **Ticket**!"
-    NewColor = "ff9900"
+        if string.find(instance.TextLabel.Text, "Printed") then
+        else
+            ItemName = username .. " just found a **Ticket**!"
+            NewColor = "ff9900"
+        end
     ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046666450867343410/unknown.png"
     elseif string.find(instance.TextLabel.Text, "Stinger") then
         ItemName = username .. " just found a **Stinger**!"
