@@ -29,6 +29,7 @@ if game.PlaceId == 1537690962 then
                 temptable.honeycurrent = statsget().Totals.Honey
                 local Honey = temptable.honeycurrent
                 local NewHoney = Honey - NewHoney1
+                local WebhookDataTracker = Webhook
                 local OSTime = os.time();
                 local Time = os.date('!*t', OSTime);
                 timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
@@ -56,7 +57,7 @@ if game.PlaceId == 1537690962 then
                     }
                 }
                 request = http_request or request or HttpPost or syn.request
-                request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
+                request({Url = WebhookDataTracker, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
             end
         end)
         end
