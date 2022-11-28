@@ -124,7 +124,7 @@ Chat.ChildAdded:Connect(function(instance)
     local Time = os.date('!*t', OSTime)
     
     -- The Webhook
-    if Dontsend = false then
+    if Dontsend == false then
         local Info = {
             ["content"] = "",
             ["embeds"] = {
