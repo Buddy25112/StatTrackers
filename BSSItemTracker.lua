@@ -11,6 +11,7 @@ Chat.ChildAdded:Connect(function(instance)
     local NewColor
     local ItemImage
     local Dontsend = false
+    local TitleMessage = "A Rare Item Was Just Found!"
     if string.find(instance.TextLabel.Text, "Ticket") then
         if string.find(instance.TextLabel.Text, "Printed") then
         else
@@ -114,6 +115,35 @@ Chat.ChildAdded:Connect(function(instance)
         ItemName = username .. " just found a **Blue Extract**!"
         NewColor = "0000ff"
         ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046674881477083186/unknown.png"
+    elseif string.find(instance.TextLabel.Text, "has planted a ") then
+        if string.find(instance.TextLabel.Text, "Sprout") then
+            if string.find(instance.TextLabel.Text, "Rare") then
+                ItemName = "🌿 A **Rare Sprout** has been summoned! 🌿"
+                NewColor = "ffffff"
+                ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046865455807221810/unknown.png"
+                TitleMessage = "Sprout Notification"
+            elseif string.find(instance.TextLabel.Text, "Epic") then
+                ItemName = "🌿 An **Epic Sprout** has been summoned! 🌿"
+                NewColor = "fff200"
+                ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046865455807221810/unknown.png"
+                TitleMessage = "Sprout Notification"
+            elseif string.find(instance.TextLabel.Text, "Legendary") then
+                ItemName = "🌿 A **Legendary Sprout** has been summoned! 🌿"
+                NewColor = "00f2ff"
+                ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046865455807221810/unknown.png"
+                TitleMessage = "Sprout Notification"
+            elseif string.find(instance.TextLabel.Text, "Supreme") then
+                ItemName = "🌿 A **Supreme Sprout** has been summoned! 🌿"
+                NewColor = "09ff00"
+                ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046865455807221810/unknown.png"
+                TitleMessage = "Sprout Notification"
+            else
+                ItemName = "🌿 A **Sprout** has been summoned! 🌿"
+                NewColor = "047800"
+                ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046865455807221810/unknown.png"
+                TitleMessage = "Sprout Notification"
+            end
+        end
     else
         Dontsend = true
     end
@@ -131,7 +161,7 @@ Chat.ChildAdded:Connect(function(instance)
             {
                     ["description"] = ItemName,
             ["author"] = {},
-            ["title"] = "A Rare Item Was Just Found!",
+            ["title"] = TitleMessage,
             ["thumbnail"] = {
                 ["url"] = ItemImage
             },
