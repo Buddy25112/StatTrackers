@@ -10,6 +10,7 @@ Chat.ChildAdded:Connect(function(instance)
     local ItemName
     local NewColor
     local ItemImage
+    local Dontsend = false
     if string.find(instance.TextLabel.Text, "Ticket") then
         if string.find(instance.TextLabel.Text, "Printed") then
         else
@@ -114,6 +115,7 @@ Chat.ChildAdded:Connect(function(instance)
         NewColor = "0000ff"
         ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046674881477083186/unknown.png"
     else
+        Dontsend = true
     end
 
     -- Other Features
@@ -122,6 +124,7 @@ Chat.ChildAdded:Connect(function(instance)
     local Time = os.date('!*t', OSTime)
     
     -- The Webhook
+    if Dontsend = false then
         local Info = {
             ["content"] = "",
             ["embeds"] = {
@@ -142,4 +145,5 @@ Chat.ChildAdded:Connect(function(instance)
         local HttpRequest = http_request;
         if syn then HttpRequest = syn.request else HttpRequest = http_request end
             HttpRequest({Url=Webhooksss, Body=Info, Method="POST", Headers=Headers})
+        end
 end)
