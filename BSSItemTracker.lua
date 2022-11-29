@@ -1,4 +1,3 @@
-_G.Webhooks = "https://discord.com/api/webhooks/976520847001014322/x-i9_Wm11euP15ifnsu7FZqitsHq_J6QqMwDRbk7h65FcUP6lFgvvIoHg2HOCqI7BEwz"
 
 -- Getting some info needed for webhook
 local username = game:GetService("Players").LocalPlayer.Name
