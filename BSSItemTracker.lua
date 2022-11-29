@@ -118,7 +118,7 @@ Chat.ChildAdded:Connect(function(instance)
         ItemName = username .. " just found a **Blue Extract**!"
         NewColor = "0000ff"
         ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046674881477083186/unknown.png"
-    elseif string.find(instance.TextLabel.Text, "has planted") or string.find(instance.TextLabel.Text, "has appeared") then
+    elseif string.find(instance.TextLabel.Text, "has planted") or string.find(instance.TextLabel.Text, "has appeared") or string.find(instance.TextLabel.Text, "has been summoned") or string.find(instance.TextLabel.Text, "has summoned a") then
         if string.find(instance.TextLabel.Text, "Sprout") then
             local username = game:GetService("Players").LocalPlayer.Name
             if username == "GuidingStarAccount1" then
@@ -127,43 +127,59 @@ Chat.ChildAdded:Connect(function(instance)
                     ItemName = "🌿 A **Rare Sprout** has been summoned! 🌿"
                     NewColor = "ffffff"
                     ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046888871910199326/1249CCAE-D4CC-4C84-A383-A8BCF68C2687.png"
-                    TitleMessage = "Sprout Notification"
+                    TitleMessage = "Server Notification"
                 elseif string.find(instance.TextLabel.Text, "Epic") then
                     ItemName = "🌿 An **Epic Sprout** has been summoned! 🌿"
                     NewColor = "fff200"
                     ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046888308803911761/EB8C271D-F876-42DB-A31C-3762B205555B.png"
-                    TitleMessage = "Sprout Notification"
+                    TitleMessage = "Server Notification"
                 elseif string.find(instance.TextLabel.Text, "Legendary") then
                     ItemName = "🌿 A **Legendary Sprout** has been summoned! 🌿"
                     NewColor = "00f2ff"
                     ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046888307033903254/9C0A4B46-0E3B-4DF2-9673-66640430BC3C.png"
-                    TitleMessage = "Sprout Notification"
+                    TitleMessage = "Server Notification"
                 elseif string.find(instance.TextLabel.Text, "Supreme") then
                     ItemName = "🌿 A **Supreme Sprout** has been summoned! 🌿"
                     NewColor = "09ff00"
                     ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046888307528839279/82F1ABC2-187E-4951-80D3-B3E7EF1D9A77.png"
-                    TitleMessage = "Sprout Notification"
+                    TitleMessage = "Server Notification"
                 elseif string.find(instance.TextLabel.Text, "Moon") then
                     ItemName = "🌿 A **Moon Sprout** has been summoned! 🌿"
                     NewColor = "baf7f5"
                     ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046893289355366510/image_13.png"
-                    TitleMessage = "Sprout Notification"
+                    TitleMessage = "Server Notification"
                 elseif string.find(instance.TextLabel.Text, "Debug") then
                     ItemName = "🌿 A **Debug Sprout** has been summoned! 🌿"
                     NewColor = "000000"
                     ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046888307998605322/ED26D21D-AAFA-4284-89AD-5BE86C63543E.png"
-                    TitleMessage = "Sprout Notification"
+                    TitleMessage = "Server Notification"
                 elseif string.find(instance.TextLabel.Text, "Gummy") then
                     ItemName = "🌿 A **Gummy Sprout** has been summoned! 🌿"
                     NewColor = "ff00e6"
                     ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046942352209608704/image_14.png"
-                    TitleMessage = "Sprout Notification"
+                    TitleMessage = "Server Notification"
                 else
                     ItemName = "🌿 A **Sprout** has been summoned! 🌿"
                     NewColor = "047800"
                     ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046865455807221810/unknown.png"
-                    TitleMessage = "Sprout Notification"
+                    TitleMessage = "Server Notification"
                 end
+            end
+        elseif string.find(instance.TextLabel.Text, "Mythic Meteor Shower") then
+            if username == "GuidingStarAccount1" then
+            else
+                ItemName = "☄️ A **Mythic Meteor Shower** has been summoned! ☄️"
+                NewColor = "9900ff"
+                ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1047024790378135623/Mythic_Meteor_Shower.png"
+                TitleMessage = "Server Notification"
+            end
+        elseif string.find(instance.TextLabel.Text, "Honeystorm") then
+            if username == "GuidingStarAccount1" then
+            else
+                ItemName = "🍯 A **Honeystorm** has been summoned! 🍯"
+                NewColor = "fcec03"
+                ItemImage = "https://media.discordapp.net/attachments/750156768834879488/976345069688864778/unknown.png"
+                TitleMessage = "Server Notification"
             end
         end
     else
@@ -171,8 +187,8 @@ Chat.ChildAdded:Connect(function(instance)
     end
 
     local AmountNumber
-    if string.find(instance.TextLabel.Text, "has planted") or string.find(instance.TextLabel.Text, "has appeared") then
-        if string.find(instance.TextLabel.Text, "Sprout") then
+    if string.find(instance.TextLabel.Text, "has planted") or string.find(instance.TextLabel.Text, "has appeared") or string.find(instance.TextLabel.Text, "has been summoned") or string.find(instance.TextLabel.Text, "has summoned a") then
+        if string.find(instance.TextLabel.Text, "Sprout") or string.find(instance.TextLabel.Text, "Mythic Meteor Shower") or string.find(instance.TextLabel.Text, "Honeystorm")then
             AmountNumber = "Nil"
         end
     elseif string.find(instance.TextLabel.Text, "1") then
@@ -400,8 +416,8 @@ Chat.ChildAdded:Connect(function(instance)
     end
     
     local SourceOfItem
-    if string.find(instance.TextLabel.Text, "has planted") or string.find(instance.TextLabel.Text, "has appeared") then
-        if string.find(instance.TextLabel.Text, "Sprout") then
+    if string.find(instance.TextLabel.Text, "has planted") or string.find(instance.TextLabel.Text, "has appeared") or string.find(instance.TextLabel.Text, "has been summoned") or string.find(instance.TextLabel.Text, "has summoned a") then
+        if string.find(instance.TextLabel.Text, "Sprout") or string.find(instance.TextLabel.Text, "Mythic Meteor Shower") or string.find(instance.TextLabel.Text, "Honeystorm") then
             SourceOfItem = "Nil"
         end
     elseif string.find(instance.TextLabel.Text, "Wealth Clock") then
@@ -486,6 +502,10 @@ Chat.ChildAdded:Connect(function(instance)
         SourceOfItem = "Stump Snail"
     elseif string.find(instance.TextLabel.Text, "Coconut Crab") then
         SourceOfItem = "Coconut Crab"
+    elseif string.find(instance.TextLabel.Text, "Honeystorm") then
+        SourceOfItem = "Honeystorm"
+    elseif string.find(instance.TextLabel.Text, "Meteor") then
+        SourceOfItem = "Meteor"
     else
         SourceOfItem = "Other"
     end
