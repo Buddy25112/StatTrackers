@@ -1,3 +1,5 @@
+_G.Webhooks = "https://discord.com/api/webhooks/976520847001014322/x-i9_Wm11euP15ifnsu7FZqitsHq_J6QqMwDRbk7h65FcUP6lFgvvIoHg2HOCqI7BEwz"
+
 -- Getting some info needed for webhook
 local username = game:GetService("Players").LocalPlayer.Name
 local Headers = {["content-type"] = "application/json"}
@@ -88,9 +90,12 @@ Chat.ChildAdded:Connect(function(instance)
         NewColor = "00a105"
         ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046672130466664480/unknown.png"
     elseif string.find(instance.TextLabel.Text, "Glue") then
-        ItemName = username .. " just found a **Glue**!"
-        NewColor = "ff00e6"
-        ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046672646458322965/unknown.png"
+        if string.find(instance.TextLabel.Text, "Dispenser") then
+        else
+            ItemName = username .. " just found a **Glue**!"
+            NewColor = "ff00e6"
+            ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046672646458322965/unknown.png"
+        end
     elseif string.find(instance.TextLabel.Text, "Oil") then
         ItemName = username .. " just found an **Oil**!"
         NewColor = "fffc96"
@@ -149,6 +154,11 @@ Chat.ChildAdded:Connect(function(instance)
                     ItemName = "🌿 A **Debug Sprout** has been summoned! 🌿"
                     NewColor = "000000"
                     ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046888307998605322/ED26D21D-AAFA-4284-89AD-5BE86C63543E.png"
+                    TitleMessage = "Sprout Notification"
+                elseif string.find(instance.TextLabel.Text, "Gummy") then
+                    ItemName = "🌿 A **Gummy Sprout** has been summoned! 🌿"
+                    NewColor = "ff00e6"
+                    ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046942352209608704/image_14.png"
                     TitleMessage = "Sprout Notification"
                 else
                     ItemName = "🌿 A **Sprout** has been summoned! 🌿"
@@ -475,4 +485,3 @@ Chat.ChildAdded:Connect(function(instance)
             HttpRequest({Url=Webhooksss, Body=Info, Method="POST", Headers=Headers})
         end
 end)
-
