@@ -1,4 +1,3 @@
-
 -- Getting some info needed for webhook
 local username = game:GetService("Players").LocalPlayer.Name
 local Headers = {["content-type"] = "application/json"}
@@ -89,12 +88,9 @@ Chat.ChildAdded:Connect(function(instance)
         NewColor = "00a105"
         ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046672130466664480/unknown.png"
     elseif string.find(instance.TextLabel.Text, "Glue") then
-        if string.find(instance.TextLabel.Text, "Dispenser") then
-        else
-            ItemName = username .. " just found a **Glue**!"
-            NewColor = "ff00e6"
-            ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046672646458322965/unknown.png"
-        end
+        ItemName = username .. " just found a **Glue**!"
+        NewColor = "ff00e6"
+        ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046672646458322965/unknown.png"
     elseif string.find(instance.TextLabel.Text, "Oil") then
         ItemName = username .. " just found an **Oil**!"
         NewColor = "fffc96"
@@ -108,9 +104,12 @@ Chat.ChildAdded:Connect(function(instance)
         NewColor = "c0f0fc"
         ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046673641867325460/unknown.png"
     elseif string.find(instance.TextLabel.Text, "Honeysuckle") then
-        ItemName = username .. " just found a **Honeysuckle**!"
-        NewColor = "ffdd00"
-        ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046674287601393735/unknown.png"
+        if string.find(instance.TextLabel.Text, ",") then
+        else
+            ItemName = username .. " just found a **Honeysuckle**!"
+            NewColor = "ffdd00"
+            ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046674287601393735/unknown.png"
+        end
     elseif string.find(instance.TextLabel.Text, "Red Extract") then
         ItemName = username .. " just found a **Red Extract**!"
         NewColor = "ff0000"
@@ -119,7 +118,7 @@ Chat.ChildAdded:Connect(function(instance)
         ItemName = username .. " just found a **Blue Extract**!"
         NewColor = "0000ff"
         ItemImage = "https://media.discordapp.net/attachments/750156768834879488/1046674881477083186/unknown.png"
-    elseif string.find(instance.TextLabel.Text, "has planted a ") or string.find(instance.TextLabel.Text, "has appeared") then
+    elseif string.find(instance.TextLabel.Text, "has planted") or string.find(instance.TextLabel.Text, "has appeared") then
         if string.find(instance.TextLabel.Text, "Sprout") then
             local username = game:GetService("Players").LocalPlayer.Name
             if username == "GuidingStarAccount1" then
@@ -172,7 +171,7 @@ Chat.ChildAdded:Connect(function(instance)
     end
 
     local AmountNumber
-    if string.find(instance.TextLabel.Text, "has planted a ") or string.find(instance.TextLabel.Text, "has appeared") then
+    if string.find(instance.TextLabel.Text, "has planted") or string.find(instance.TextLabel.Text, "has appeared") then
         if string.find(instance.TextLabel.Text, "Sprout") then
             AmountNumber = "Nil"
         end
@@ -401,7 +400,7 @@ Chat.ChildAdded:Connect(function(instance)
     end
     
     local SourceOfItem
-    if string.find(instance.TextLabel.Text, "has planted a") or string.find(instance.TextLabel.Text, "has appeared") then
+    if string.find(instance.TextLabel.Text, "has planted") or string.find(instance.TextLabel.Text, "has appeared") then
         if string.find(instance.TextLabel.Text, "Sprout") then
             SourceOfItem = "Nil"
         end
@@ -435,11 +434,66 @@ Chat.ChildAdded:Connect(function(instance)
         SourceOfItem = "Puffshroom"
     elseif string.find(instance.TextLabel.Text, "Glue Dispenser") then
         SourceOfItem = "Glue Dispenser"
-    elseif string.find(instance.TextLabel.Text, "Blender") then
-        SourceOfItem = "Blender"
+    elseif string.find(instance.TextLabel.Text, "Memory Match") then
+        SourceOfItem = "Memory Match"
+    elseif string.find(instance.TextLabel.Text, "Planter") then
+        SourceOfItem = "Planter"
+    elseif string.find(instance.TextLabel.Text, "Sparkles") then
+        SourceOfItem = "Sparkles"
+    elseif string.find(instance.TextLabel.Text, "Fireflies") then
+        SourceOfItem = "Fireflies"
+    elseif string.find(instance.TextLabel.Text, "Festive Gift") then
+        SourceOfItem = "Festive Gift"
+    elseif string.find(instance.TextLabel.Text, "Sunflower Field") then
+        SourceOfItem = "Sunflower Field"
+    elseif string.find(instance.TextLabel.Text, "Dandelion Field") then
+        SourceOfItem = "Dandelion Field"
+    elseif string.find(instance.TextLabel.Text, "Mushroom Field") then
+        SourceOfItem = "Mushroom Field"
+    elseif string.find(instance.TextLabel.Text, "Blue Flower Field") then
+        SourceOfItem = "Blue Flower Field"
+    elseif string.find(instance.TextLabel.Text, "Clover Field") then
+        SourceOfItem = "Clover Field"
+    elseif string.find(instance.TextLabel.Text, "Spider Field") then
+        SourceOfItem = "Spider Field"
+    elseif string.find(instance.TextLabel.Text, "Bamboo Field") then
+        SourceOfItem = "Bamboo Field"
+    elseif string.find(instance.TextLabel.Text, "Strawberry Field") then
+        SourceOfItem = "Strawberry Field"
+    elseif string.find(instance.TextLabel.Text, "Pineapple Patch") then
+        SourceOfItem = "Pineapple Patch"
+    elseif string.find(instance.TextLabel.Text, "Stump Field") then
+        SourceOfItem = "Stump Field"
+    elseif string.find(instance.TextLabel.Text, "Cactus Field") then
+        SourceOfItem = "Cactus Field"
+    elseif string.find(instance.TextLabel.Text, "Pumpkin Patch") then
+        SourceOfItem = "Pumpkin Patch"
+    elseif string.find(instance.TextLabel.Text, "Pine Tree Forest") then
+        SourceOfItem = "Pine Tree Forest"
+    elseif string.find(instance.TextLabel.Text, "Rose Field") then
+        SourceOfItem = "Rose Field"
+    elseif string.find(instance.TextLabel.Text, "Mountain Top Field") then
+        SourceOfItem = "Mountain Top Field"
+    elseif string.find(instance.TextLabel.Text, "Coconut Field") then
+        SourceOfItem = "Coconut Field"
+    elseif string.find(instance.TextLabel.Text, "Windy Bee") then
+        SourceOfItem = "Windy Bee"
+    elseif string.find(instance.TextLabel.Text, "Pepper Patch") then
+        SourceOfItem = "Pepper Patch"
+    elseif string.find(instance.TextLabel.Text, "Mondo Chick") then
+        SourceOfItem = "Mondo Chick"
+    elseif string.find(instance.TextLabel.Text, "Stump Snail") then
+        SourceOfItem = "Stump Snail"
+    elseif string.find(instance.TextLabel.Text, "Coconut Crab") then
+        SourceOfItem = "Coconut Crab"
     else
         SourceOfItem = "Other"
     end
+
+    if string.find(instance.TextLabel.Text, "Activated") or string.find(instance.TextLabel.Text, "-") or string.find(instance.TextLabel.Text, "Blender Refund") then
+        Dontsend = true
+    end
+
 
     -- Other Features
     local OSTime = os.time()
