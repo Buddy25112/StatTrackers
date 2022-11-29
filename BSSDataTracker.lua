@@ -25,7 +25,7 @@ if game.PlaceId == 1537690962 then
             
             local NewHoney1 = statsget().Totals.Honey
                 
-            task.spawn(function() while task.wait(3600) do
+            task.spawn(function() while task.wait(5) do
                 temptable.honeycurrent = statsget().Totals.Honey
                 local Honey = temptable.honeycurrent
                 local NewHoney = Honey - NewHoney1
