@@ -58,19 +58,19 @@ if game.PlaceId == 1537690962 then
                     ["value"] = "Count:" .. abb(Honey) .. " | +" .. abb(HoneyPerHour) .. " *in the last Hour*",
                     ["inline"] = true
                 }   
-                table.insert(Info["embeds"][1]["fields"], thingy)
+                table.insert(msg["embeds"][1]["fields"], thingy)
                 local thingy1 = {
                     ["name"] = "Honey Made Since Rejoin",
                     ["value"] = "Count:" .. abb(NewHoney),
                     ["inline"] = true
                 }
-                table.insert(Info["embeds"][1]["fields"], thingy1)
+                table.insert(msg["embeds"][1]["fields"], thingy1)
                 local thingy2 = {
                     ["name"] = "Eggs Left",
-                    ["value"] = abb(eggsleftPOS),
+                    ["value"] = "Dead for now",
                     ["inline"] = true
                 }
-                table.insert(Info["embeds"][1]["fields"], thingy2)
+                table.insert(msg["embeds"][1]["fields"], thingy2)
                 request = http_request or request or HttpPost or syn.request
                 request({Url = WebhookDataTracker, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
             end
