@@ -51,7 +51,7 @@
                     ["embeds"] = {
                         {
                             ["title"] = username .. "'s Hourly Honey Data",
-                            ["color"] = 0b03fc,
+                            ["color"] = "0b03fc",
                             ["description"] = "Honey Data will be displayed below",
                             ["thumbnail"] = {
                                 ["url"] = "https://media.discordapp.net/attachments/750156768834879488/976345069688864778/unknown.png"
