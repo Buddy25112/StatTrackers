@@ -1,5 +1,7 @@
+local Webhook = "https://discord.com/api/webhooks/976520847001014322/x-i9_Wm11euP15ifnsu7FZqitsHq_J6QqMwDRbk7h65FcUP6lFgvvIoHg2HOCqI7BEwz"
 if game.PlaceId == 1537690962 then
             local username = game:GetService("Players").LocalPlayer.Name
+            local SpendableHoney1 = game:GetService("Players").LocalPlayer.CoreStats.Honey.Value
             
             function abb(Value)
                 local Number
@@ -31,7 +33,17 @@ if game.PlaceId == 1537690962 then
                 local Honey = temptable.honeycurrent
                 local NewHoney = Honey - NewHoney1
                 local HoneyPerHour = Honey - NewHoney2
-                NewHoney2 = HoneyPerHour + Honey
+                NewHoney2 = NewHoney2 + HoneyPerHour
+                local SpendableHoney = game:GetService("Players").LocalPlayer.CoreStats.Honey.Value
+                local SpendableHoneyPerHour1 = SpendableHoney - SpendableHoney1
+                SpendableHoney1 = SpendableHoney1 + SpendableHoneyPerHour1
+                local AverageHoneyADay = math.floor(HoneyPerHour * 24)
+                local SpendableHoneyPerHour
+                if SpendableHoneyPerHour1 > 0 then
+                    SpendableHoneyPerHour = "+" .. abb(SpendableHoneyPerHour1)
+                else
+                    SpendableHoneyPerHour = abb(SpendableHoneyPerHour1)
+                end
                 local WebhookDataTracker = Webhook
                 local OSTime = os.time();
                 local Time = os.date('!*t', OSTime);
@@ -40,7 +52,7 @@ if game.PlaceId == 1537690962 then
                     ["embeds"] = {
                         {
                             ["title"] = username .. "'s Hourly Honey Data",
-                            ["color"] = 0xfcec03,
+                            ["color"] = tonumber(tostring("0x" .. NewColor)),
                             ["description"] = "Honey Data will be displayed below",
                             ["thumbnail"] = {
                                 ["url"] = "https://media.discordapp.net/attachments/750156768834879488/976345069688864778/unknown.png"
@@ -55,22 +67,28 @@ if game.PlaceId == 1537690962 then
                 }
                 local thingy = {
                     ["name"] = "Total Honey",
-                    ["value"] = "Count:" .. abb(Honey) .. " | +" .. abb(HoneyPerHour) .. " *in the last Hour*",
-                    ["inline"] = true
+                    ["value"] = "Count: " .. abb(Honey) .. " | *+" .. abb(HoneyPerHour) .. " in the last Hour*",
+                    ["inline"] = false
                 }   
                 table.insert(msg["embeds"][1]["fields"], thingy)
                 local thingy1 = {
-                    ["name"] = "Honey Made Since Rejoin",
-                    ["value"] = "Count:" .. abb(NewHoney),
-                    ["inline"] = true
+                    ["name"] = "Spendable Honey",
+                    ["value"] = "Count: " .. abb(SpendableHoney) .. " | *" .. abb(SpendableHoneyPerHour) .. " in the last Hour*",
+                    ["inline"] = false
                 }
                 table.insert(msg["embeds"][1]["fields"], thingy1)
                 local thingy2 = {
-                    ["name"] = "Eggs Left",
-                    ["value"] = "Dead for now",
-                    ["inline"] = true
+                    ["name"] = "Honey Made Since Rejoin",
+                    ["value"] = "Count: " .. abb(NewHoney),
+                    ["inline"] = false
                 }
                 table.insert(msg["embeds"][1]["fields"], thingy2)
+                local thingy3 = {
+                  ["name"] = "Average Honey Per Day",
+                  ["value"] = "Count: " .. abb(AverageHoneyADay),
+                  ["inline"] = false
+              }
+              table.insert(msg["embeds"][1]["fields"], thingy3)
                 request = http_request or request or HttpPost or syn.request
                 request({Url = WebhookDataTracker, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
             end
