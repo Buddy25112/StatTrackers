@@ -161,10 +161,11 @@ if game.PlaceId == 9551640993 then
         for i,v in pairs(game:GetService("Players"):GetChildren()) do
             for n,b in pairs(OnlyCount) do
                 if string.find(v.Name, b) then
-                    Eggs1 = Eggs1 + v.leaderstats["Eggs"].Value
+                    -- Eggs1 = Eggs1 + v.leaderstats["Eggs"].Value
                 end
             end
         end
+	Eggs1 = 10000000
         local Goal 
         if Eggs1 > 9000000 and Eggs1 < 10000000 then 
             Goal = 10000000
