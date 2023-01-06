@@ -281,7 +281,7 @@ if game.PlaceId == 9551640993 then
             else
                 TimeNumber2 = Week2 .. " Weeks " .. Day3 .. " Days"
             end
-            TimeNumber = TimeNumber2
+            TimeNumber = "NaN"
         
         end
         
