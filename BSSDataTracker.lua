@@ -1,4 +1,4 @@
-
+if game.PlaceId == 1537690962 then
             local username = game:GetService("Players").LocalPlayer.Name
             local SpendableHoney1 = game:GetService("Players").LocalPlayer.CoreStats.Honey.Value
             
@@ -27,7 +27,7 @@
             local NewHoney1 = statsget().Totals.Honey
             local NewHoney2 = statsget().Totals.Honey
                 
-            task.spawn(function() while task.wait(10) do
+            while wait(10) do
                 temptable.honeycurrent = statsget().Totals.Honey
                 local Honey = temptable.honeycurrent
                 local NewHoney = Honey - NewHoney1
@@ -51,7 +51,7 @@
                     ["embeds"] = {
                         {
                             ["title"] = username .. "'s Hourly Honey Data",
-                            ["color"] = "0b03fc",
+                            ["color"] = tonumber(tostring("0x" .. NewColor)),
                             ["description"] = "Honey Data will be displayed below",
                             ["thumbnail"] = {
                                 ["url"] = "https://media.discordapp.net/attachments/750156768834879488/976345069688864778/unknown.png"
@@ -91,6 +91,5 @@
                 request = http_request or request or HttpPost or syn.request
                 request({Url = WebhookDataTracker, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
             end
-        end)
-
+        end
         print("Has been enabled successfully")
