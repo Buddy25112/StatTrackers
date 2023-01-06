@@ -1,4 +1,3 @@
-local Webhook = "https://discord.com/api/webhooks/976520847001014322/x-i9_Wm11euP15ifnsu7FZqitsHq_J6QqMwDRbk7h65FcUP6lFgvvIoHg2HOCqI7BEwz"
 if game.PlaceId == 1537690962 then
             local username = game:GetService("Players").LocalPlayer.Name
             local SpendableHoney1 = game:GetService("Players").LocalPlayer.CoreStats.Honey.Value
