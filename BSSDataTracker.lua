@@ -7,7 +7,7 @@ if game.PlaceId == 1537690962 then
                 while true do
                         Formatted, Number = string.gsub(Formatted, "^(-?%d+)(%d%d%d)", '%1,%2')
                         if (Number == 0) then
-                                break
+                            break
                         end
                     end
                     return Formatted
@@ -24,11 +24,14 @@ if game.PlaceId == 1537690962 then
             function statsget() local StatCache = require(game.ReplicatedStorage.ClientStatCache) local stats = StatCache:Get() return stats end
             
             local NewHoney1 = statsget().Totals.Honey
+            local NewHoney2 = statsget().Totals.Honey
                 
-            task.spawn(function() while task.wait(5) do
+            task.spawn(function() while task.wait(10) do
                 temptable.honeycurrent = statsget().Totals.Honey
                 local Honey = temptable.honeycurrent
                 local NewHoney = Honey - NewHoney1
+                local HoneyPerHour = Honey - NewHoney2
+                NewHoney2 = HoneyPerHour + Honey
                 local WebhookDataTracker = Webhook
                 local OSTime = os.time();
                 local Time = os.date('!*t', OSTime);
@@ -38,17 +41,11 @@ if game.PlaceId == 1537690962 then
                         {
                             ["title"] = username .. "'s Hourly Honey Data",
                             ["color"] = 0xfcec03,
-                            ["description"] = abb(Honey) .. " Total Honey Has Been Collected",
+                            ["description"] = "Honey Data will be displayed below",
                             ["thumbnail"] = {
                                 ["url"] = "https://media.discordapp.net/attachments/750156768834879488/976345069688864778/unknown.png"
                             },
-                            ["fields"] = {
-                            {
-                                ["name"] = "Honey Gained Since Execution",
-                                ["value"] = abb(NewHoney) .. " Honey has been gained since execution",
-                                ["inline"] = true
-                                },
-                            },
+                            ["fields"] = {},
                             ["footer"] = {
                                 ["text"] = "Updates every hour!"
                             },
@@ -56,6 +53,24 @@ if game.PlaceId == 1537690962 then
                         }
                     }
                 }
+                local thingy = {
+                    ["name"] = "Total Honey",
+                    ["value"] = "Count:" .. abb(Honey) .. " | +" .. abb(HoneyPerHour) .. " *in the last Hour*",
+                    ["inline"] = true
+                }   
+                table.insert(Info["embeds"][1]["fields"], thingy)
+                local thingy1 = {
+                    ["name"] = "Honey Made Since Rejoin",
+                    ["value"] = "Count:" .. abb(NewHoney),
+                    ["inline"] = true
+                }
+                table.insert(Info["embeds"][1]["fields"], thingy1)
+                local thingy2 = {
+                    ["name"] = "Eggs Left",
+                    ["value"] = abb(eggsleftPOS),
+                    ["inline"] = true
+                }
+                table.insert(Info["embeds"][1]["fields"], thingy2)
                 request = http_request or request or HttpPost or syn.request
                 request({Url = WebhookDataTracker, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
             end
