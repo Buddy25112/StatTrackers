@@ -26,6 +26,7 @@ if game.PlaceId == 1537690962 then
             
             local NewHoney1 = statsget().Totals.Honey
             local NewHoney2 = statsget().Totals.Honey
+            local WebhookDataTracker = Webhook
                 
             while wait(10) do
                 temptable.honeycurrent = statsget().Totals.Honey
@@ -43,7 +44,6 @@ if game.PlaceId == 1537690962 then
                 else
                     SpendableHoneyPerHour = abb(SpendableHoneyPerHour1)
                 end
-                local WebhookDataTracker = Webhook
                 local OSTime = os.time();
                 local Time = os.date('!*t', OSTime);
                 timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
