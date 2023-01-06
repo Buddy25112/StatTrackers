@@ -1,4 +1,4 @@
-if game.PlaceId == 1537690962 then
+
             local username = game:GetService("Players").LocalPlayer.Name
             local SpendableHoney1 = game:GetService("Players").LocalPlayer.CoreStats.Honey.Value
             
@@ -92,5 +92,5 @@ if game.PlaceId == 1537690962 then
                 request({Url = WebhookDataTracker, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
             end
         end)
-        end
+
         print("Has been enabled successfully")
