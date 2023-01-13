@@ -487,7 +487,7 @@ if game.PlaceId == 9551640993 then
         end
         local TotalGain77
         if TotalGain7 > 0 then
-            TotalGain7 = "+" .. abb(TotalGain7)
+            TotalGain77 = "+" .. abb(TotalGain7)
         else
             TotalGain77 = abb(TotalGain7)
         end
