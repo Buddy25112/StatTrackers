@@ -14,7 +14,33 @@ if game.PlaceId == 9551640993 then
     local Count10 = {"BuddyHatchAlt11"}
     local Count11 = {"BuddyHatchAlt1"}
     local Count12 = {"AJ_GamingYYTT"}
-    
+
+    function FormatCount(FC)
+        local C = FC:gsub(",", "")
+        return C
+    end
+
+    -- Number 1 Eggs
+    local nr1count1 = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["1"].Number.text)
+    -- Number 2 Eggs
+    local nr2count1 = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["2"].Number.text)
+    -- Number 3 Eggs
+    local nr3count1 = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["3"].Number.text)  
+    -- Number 4 Eggs
+    local nr4count1 = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["4"].Number.text)
+    -- Number 5 Eggs
+    local nr5count1 = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["5"].Number.text)
+    -- Number 6 Eggs
+    local nr6count1 = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["6"].Number.text)   
+    -- Number 7 Eggs
+    local nr7count1 = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["7"].Number.text)
+    -- Number 8 Eggs
+    local nr8count1 = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["8"].Number.text)
+    -- Number 9 Eggs
+    local nr9count1 = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["9"].Number.text) 
+    -- Number 10 Eggs
+    local nr10count1 = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["10"].Number.text)
+
     local Eggs1 = 0
     for i,v in pairs(game:GetService("Players"):GetChildren()) do
         for n,b in pairs(Count1) do
@@ -117,43 +143,43 @@ if game.PlaceId == 9551640993 then
     while wait(1800) do
         -- Number 1 Eggs
         local nr1user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["1"].Username.text
-        local nr1count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["1"].Number.text
+        local nr1count = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["1"].Number.text)
 
         -- Number 2 Eggs
         local nr2user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["2"].Username.text
-        local nr2count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["2"].Number.text
+        local nr2count = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["2"].Number.text)
 
         -- Number 3 Eggs
         local nr3user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["3"].Username.text
-        local nr3count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["3"].Number.text
+        local nr3count = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["3"].Number.text)
     
         -- Number 4 Eggs
         local nr4user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["4"].Username.text
-        local nr4count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["4"].Number.text
+        local nr4count = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["4"].Number.text)
 
         -- Number 5 Eggs
         local nr5user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["5"].Username.text
-        local nr5count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["5"].Number.text
+        local nr5count = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["5"].Number.text)
 
         -- Number 6 Eggs
         local nr6user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["6"].Username.text
-        local nr6count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["6"].Number.text
+        local nr6count = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["6"].Number.text)
     
         -- Number 7 Eggs
         local nr7user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["7"].Username.text
-        local nr7count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["7"].Number.text
+        local nr7count = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["7"].Number.text)
 
         -- Number 8 Eggs
         local nr8user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["8"].Username.text
-        local nr8count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["8"].Number.text
+        local nr8count = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["8"].Number.text)
 
         -- Number 9 Eggs
         local nr9user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["9"].Username.text
-        local nr9count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["9"].Number.text
+        local nr9count = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["9"].Number.text)
 
         -- Number 10 Eggs
         local nr10user = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["10"].Username.text
-        local nr10count = game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["10"].Number.text
+        local nr10count = FormatCount(game:GetService("Workspace").Leaderboards.Eggs.Board.SurfaceGui.Content.Frame["10"].Number.text)
         
         -- Estimated Time Counter
         local OnlyCount = {"buddy25112"}
@@ -181,7 +207,7 @@ if game.PlaceId == 9551640993 then
         elseif Eggs1 > 25000000 and Eggs1 < 30000000 then
             Goal = 30000000
             Goal2 = "30 Million"
-	elseif Eggs1 > 30000000 and Eggs1 < 35000000 then
+	    elseif Eggs1 > 30000000 and Eggs1 < 35000000 then
             Goal = 35000000
             Goal2 = "35 Million"
         elseif Eggs1 > 35000000 and Eggs1 < 40000000 then
@@ -281,7 +307,7 @@ if game.PlaceId == 9551640993 then
             else
                 TimeNumber2 = Week2 .. " Weeks " .. Day3 .. " Days"
             end
-        
+            TimeNumber = TimeNumber2
         end
         
         -- Total Account Hatches
@@ -397,7 +423,93 @@ if game.PlaceId == 9551640993 then
         local TotalEggss = Eggss1 + Eggss2 + Eggss3 + Eggss4 + Eggss5 + Eggss6 + Eggss7 + Eggss8 + Eggss9 + Eggss10 + Eggss11 + Eggss12 
         local EggsHatchedPer1 = TotalEggss - TotalEggs
         TotalEggs = TotalEggs + EggsHatchedPer1
-        
+
+        local EggDifference1 = nr1count - nr1count1
+        nr1count1 = nr1count1 + EggDifference1
+        local EggDifference2 = nr2count - nr2count1
+        nr2count1 = nr2count1 + EggDifference2
+        local EggDifference3 = nr3count - nr3count1
+        nr3count1 = nr3count1 + EggDifference3
+        local EggDifference4 = nr4count - nr4count1
+        nr4count1 = nr4count1 + EggDifference4
+        local EggDifference5 = nr5count - nr5count1
+        nr5count1 = nr5count1 + EggDifference5
+        local EggDifference6 = nr6count - nr6count1
+        nr6count1 = nr6count1 + EggDifference6
+        local EggDifference7 = nr7count - nr7count1
+        nr7count1 = nr7count1 + EggDifference7
+        local EggDifference8 = nr8count - nr8count1
+        nr8count1 = nr8count1 + EggDifference8
+        local EggDifference9 = nr9count - nr9count1
+        nr9count1 = nr9count1 + EggDifference9
+        local EggDifference10 = nr10count - nr10count1
+        nr10count1 = nr10count1 + EggDifference10
+
+        local TotalGain2 = EggDifference2 - EggDifference1
+        local TotalGain3 = EggDifference3 - EggDifference2
+        local TotalGain4 = EggDifference4 - EggDifference3
+        local TotalGain5 = EggDifference5 - EggDifference4
+        local TotalGain6 = EggDifference6 - EggDifference5
+        local TotalGain7 = EggDifference7 - EggDifference6
+        local TotalGain8 = EggDifference8 - EggDifference7
+        local TotalGain9 = EggDifference9 - EggDifference8
+        local TotalGain10 = EggDifference10 - EggDifference9
+
+        local TotalGain22
+        if TotalGain2 > 0 then
+            TotalGain22 = "+" .. abb(TotalGain2)
+        else
+            TotalGain22 = abb(TotalGain2)
+        end
+        local TotalGain33
+        if TotalGain3 > 0 then
+            TotalGain33 = "+" .. abb(TotalGain3)
+        else
+            TotalGain33 = abb(TotalGain3)
+        end
+        local TotalGain44
+        if TotalGain4 > 0 then
+            TotalGain44 = "+" .. abb(TotalGain4)
+        else
+            TotalGain44 = abb(TotalGain4)
+        end
+        local TotalGain55
+        if TotalGain5 > 0 then
+            TotalGain55 = "+" .. abb(TotalGain5)
+        else
+            TotalGain55 = abb(TotalGain5)
+        end
+        local TotalGain66
+        if TotalGain6 > 0 then
+            TotalGain66 = "+" .. abb(TotalGain6)
+        else
+            TotalGain66 = abb(TotalGain6)
+        end
+        local TotalGain77
+        if TotalGain7 > 0 then
+            TotalGain7 = "+" .. abb(TotalGain7)
+        else
+            TotalGain77 = abb(TotalGain7)
+        end
+        local TotalGain88
+        if TotalGain8 > 0 then
+            TotalGain88 = "+" .. abb(TotalGain8)
+        else
+            TotalGain88 = abb(TotalGain8)
+        end
+        local TotalGain99
+        if TotalGain9 > 0 then
+            TotalGain99 = "+" .. abb(TotalGain9)
+        else
+            TotalGain99 = abb(TotalGain9)
+        end
+        local TotalGain1010
+        if TotalGain10 > 0 then
+            TotalGain1010 = "+" .. abb(TotalGain10)
+        else
+            TotalGain1010 = abb(TotalGain10)
+        end
+
         local Webhooksss = _G.Webhookss
         local OSTime = os.time();
         local Time = os.date('!*t', OSTime);
@@ -421,70 +533,70 @@ if game.PlaceId == 9551640993 then
         }
             local Number1PlayerEmbed = {
             	["name"] = "#1 Hatcher: " .. nr1user .. " 🥇",
-            	["value"] = "Count: " .. nr1count,
+            	["value"] = "Count: " .. abb(nr1count),
             	["inline"] = false
         	    }
             	table.insert(msg["embeds"][1]["fields"], Number1PlayerEmbed)
             	
 	        local Number2PlayerEmbed = {
 	            ["name"] = "#2 Hatcher: " .. nr2user .. " 🥈",
-				["value"] = "Count: " .. nr2count,
+				["value"] = "Count: " .. abb(nr2count) .. " (" .. TotalGain22 .. ")",
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], Number2PlayerEmbed)
 
 	        local Number3PlayerEmbed = {
 	            ["name"] = "#3 Hatcher: " .. nr3user .. " 🥉",
-				["value"] = "Count: " .. nr3count,
+				["value"] = "Count: " .. abb(nr3count) .. " (" .. TotalGain33 .. ")",
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], Number3PlayerEmbed)
             
             local Number4PlayerEmbed = {
 	            ["name"] = "#4 Hatcher: " .. nr4user,
-				["value"] = "Count: " .. nr4count,
+				["value"] = "Count: " .. abb(nr4count) .. " (" .. TotalGain44 .. ")",
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], Number4PlayerEmbed)
             
             local Number5PlayerEmbed = {
 	            ["name"] = "#5 Hatcher: " .. nr5user,
-				["value"] = "Count: " .. nr5count,
+				["value"] = "Count: " .. abb(nr5count) .. " (" .. TotalGain55 .. ")",
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], Number5PlayerEmbed)
             
             local Number6PlayerEmbed = {
 	            ["name"] = "#6 Hatcher: " .. nr6user,
-				["value"] = "Count: " .. nr6count,
+				["value"] = "Count: " .. abb(nr6count) .. " (" .. TotalGain66 .. ")",
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], Number6PlayerEmbed)
             
             local Number7PlayerEmbed = {
 	            ["name"] = "#7 Hatcher: " .. nr7user,
-				["value"] = "Count: " .. nr7count,
+				["value"] = "Count: " .. abb(nr7count) .. " (" .. TotalGain77 .. ")",
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], Number7PlayerEmbed)
             
             local Number8PlayerEmbed = {
 	            ["name"] = "#8 Hatcher: " .. nr8user,
-				["value"] = "Count: " .. nr8count,
+				["value"] = "Count: " .. abb(nr8count) .. " (" .. TotalGain88 .. ")",
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], Number8PlayerEmbed)
             
             local Number9PlayerEmbed = {
 	            ["name"] = "#9 Hatcher: " .. nr9user,
-				["value"] = "Count: " .. nr9count,
+				["value"] = "Count: " .. abb(nr9count) .. " (" .. TotalGain99 .. ")",
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], Number9PlayerEmbed)
             
             local Number10PlayerEmbed = {
 	            ["name"] = "#10 Hatcher: " .. nr10user,
-				["value"] = "Count: " .. nr10count,
+				["value"] = "Count: " .. abb(nr10count) .. " (" .. TotalGain1010 .. ")",
 				["inline"] = false
 	            }
 	            table.insert(msg["embeds"][1]["fields"], Number10PlayerEmbed)
