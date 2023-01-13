@@ -181,7 +181,7 @@ if game.PlaceId == 9551640993 then
         elseif Eggs1 > 25000000 and Eggs1 < 30000000 then
             Goal = 30000000
             Goal2 = "30 Million"
-	    elseif Eggs1 > 30000000 and Eggs1 < 35000000 then
+	elseif Eggs1 > 30000000 and Eggs1 < 35000000 then
             Goal = 35000000
             Goal2 = "35 Million"
         elseif Eggs1 > 35000000 and Eggs1 < 40000000 then
