@@ -60,7 +60,7 @@ if game.PlaceId == 9551640993 then
    
     print("MS2 Stats Tracker V1.0.0, Maintained and Updated by PetSimulatorXPlayer#5011")
     
-    while wait(_G.SettingsTable.Intervals) do
+    task.spawn(function() while task.wait(_G.SettingsTable.Intervals) do
         
         -- Eggs
         count1 = 0
@@ -146,5 +146,6 @@ if game.PlaceId == 9551640993 then
 	    end
         request = http_request or request or HttpPost or syn.request
         request({Url = Webhooksss, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
-    end
+	end
+    end)
 end
