@@ -1,7 +1,7 @@
 if game.PlaceId == 9551640993 then
 	local username = game:GetService("Players").LocalPlayer.Name
 	local userid = game:GetService("Players").LocalPlayer.UserId
-	local icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..userid.."&width=420&height=420&format=png"
+	local icon = "https://media.discordapp.net/attachments/750156768834879488/1068448911628439582/mining-simulator-2-codes-2.png?width=740&height=671"
 	local NewColor = (_G.SettingsTable.Color == "None" and "fffff") or _G.SettingsTable.Color
 	local number = 1
 	local number2 = 1
